@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default props => {
     return (
         <div className="MuitoPrazerBody">
@@ -18,7 +20,7 @@ export default props => {
                 <button>Escrever mensagem</button>
             </div>
             <div className="Photo">
-                <img src="/media/Familia.png" alt="" />
+                <Image src="/media/Familia.png" width={1000} height={1000} />
             </div>
         </div>
     )

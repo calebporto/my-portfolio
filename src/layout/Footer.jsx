@@ -6,15 +6,21 @@ export default props => {
             <div className="RedesSociais">
                 <div className="Item">
                     <Image id="linkedin" src="/media/linkedin.png"
-                    onClick={() => window.open('https://www.linkedin.com/in/calebportodev/')}/>
+                    onClick={() => window.open('https://www.linkedin.com/in/calebportodev/')}
+                    width= {100} height={100}
+                    />
                 </div>
                 <div className="Item">
                     <Image id="github" src="/media/github.png" alt="" 
-                    onClick={() => window.open('https://github.com/calebporto')}/>
+                    onClick={() => window.open('https://github.com/calebporto')}
+                    width= {100} height={100}
+                    />
                 </div>
                 <div className="Item">
                     <Image id="instagram" src="/media/instagram.png" alt="" 
-                    onClick={() => window.open('https://www.instagram.com/caleb_porto/')}/>
+                    onClick={() => window.open('https://www.instagram.com/caleb_porto/')}
+                    width= {100} height={100}
+                    />
                 </div>
             </div>
             <div className="Copy">
