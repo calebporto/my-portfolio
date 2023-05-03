@@ -14,7 +14,7 @@ import ContactBox from '@/components/ContactBox';
 import Contato from '@/components/Contato';
 import Footer from '@/layout/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -94,3 +94,6 @@ export default function Home() {
     </>
   )
 }
+Home.displayName = 'Home'
+
+export default Home
