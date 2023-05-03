@@ -11,7 +11,7 @@ export default props => {
                 Estudo desenvolvimento de software desde Novembro de 2021, tendo começado a desenvolver meus primeiros
                 projetos profissionais em Junho de 2022. Desde então, tenho buscado a excelência dia após dia, gerando
                 qualidade e resultados cada vez mais satisfatórios a cada projeto realizado.<br></br>
-                Minha especialidade é a criação de sistemas de gestão para empresas (ERP's) e criação de sites profissionais
+                Minha especialidade é a criação de sistemas de gestão para empresas (ERPs) e criação de sites profissionais
                 para diversos segmentos, como e-commerces, sites institucionais e plataformas de cursos.
                 Trabalho também com criação de Apps mobile Android e iOS e automações de tarefas em geral.
                 Se você precisa de um sistema de gerenciamento para o seu negócio, um App ou um site para a sua loja, ou 
