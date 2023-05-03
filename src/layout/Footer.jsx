@@ -1,17 +1,19 @@
+import Image from "next/image"
+
 export default props => {
     return (
         <div className="Footer">
             <div className="RedesSociais">
                 <div className="Item">
-                    <img id="linkedin" src="/media/linkedin.png" alt="" 
+                    <Image id="linkedin" src="/media/linkedin.png"
                     onClick={() => window.open('https://www.linkedin.com/in/calebportodev/')}/>
                 </div>
                 <div className="Item">
-                    <img id="github" src="/media/github.png" alt="" 
+                    <Image id="github" src="/media/github.png" alt="" 
                     onClick={() => window.open('https://github.com/calebporto')}/>
                 </div>
                 <div className="Item">
-                    <img id="instagram" src="/media/instagram.png" alt="" 
+                    <Image id="instagram" src="/media/instagram.png" alt="" 
                     onClick={() => window.open('https://www.instagram.com/caleb_porto/')}/>
                 </div>
             </div>

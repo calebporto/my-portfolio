@@ -1,7 +1,9 @@
+import Image from "next/image"
+
 export default props => {
     return (
         <div className="ImagemBg">
-            <img src={props.link} alt="" />
+            <Image src={props.link}></Image>
         </div>
     )
 }
