@@ -1,107 +1,417 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*::-webkit-scrollbar-track {
+  background: black;
+}
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+*::-webkit-scrollbar-thumb {
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  border: solid 1px gray;
+}
+.Body {
+  width: 100%;
+  height: 100vh;
+}
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.Menu {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.MenuBt {
+  width: 15%;
+  color: rgb(197, 197, 197);
+  margin: 1rem .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.MenuBt:hover {
+  transition-duration: 500ms;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.ImagemBg {
+  height: 55%;
+  width: auto;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.ImagemBg img {
+  height: 100%;
+  width: auto;
+}
+.SelfName {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.SelfName.Description {
+  font-size: 15px;
+  font-weight: normal;
+}
+.DivStack {
+  margin-top: 3rem;
+  width: 100%;
+  min-height: 7%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Stack {
+  height: 50px;
+  width: auto;
+  margin: .5rem;
+}
+.Stack img {
+  height: 100%;
+  width: auto;
+}
+.PageTitle {
+  width: 100%;
+  display: flex;
+  border-bottom: dotted 5px cornflowerblue;
+  height: 20vh;
+  padding-bottom: 1rem;
+}
+.PageTitle p {
+  font-size: 4vw;
+  height: auto;
+  margin-top: auto;
+}
+.MuitoPrazerBody {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 2% 0;
+}
+.MuitoPrazerBody div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  text-align: justify;
+  font-size: 13px;
+}
+.MuitoPrazerBody div img {
+  margin: auto;
+  height: 100%;
+  width: auto;
+}
+.MuitoPrazerBody .Text {
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.MuitoPrazerBody div button {
+  margin-bottom: 0;
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: .5rem 0;
+  background: linear-gradient(rgb(18, 27, 44), rgb(0, 0, 0));
+  color: white;
+  font-weight: bold;
+  margin: 2rem 0;
+  cursor: pointer;
+  box-shadow: 0px 5px 3px rgba(50, 50, 50, 0.77);
+}
+.MuitoPrazerBody div button:active {
+  position: relative;
+  top: 3px;
+  box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.77);
+}
+.PortfolioItem {
+  width: 50%;
+  height: 80vh;
+  padding: 2rem 1rem;
+}
+.PortfolioItem .Title {
+  font-size: 20px;
+  height: 7%;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+.PortfolioItem .Video {
+  height: 65%;
+}
+.PortfolioItem .Description {
+  margin: 1rem 0;
+  font-size: 12px;
+  text-align: justify;
+  width: 100%;
+  color: white;
+  height: 28%;
+}
+.ContactBox {
+  width: 100%;
+  height: 50vh;
+  padding: 2rem;
+  box-shadow: 5px 5px 3px rgba(50, 50, 50, 0.77);
+  border: solid 1px gray;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.ContactBox .Title {
+  height: 12%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.ContactBox .Message {
+  height: 73%;
+  width: 100%;
+  margin: 1rem 0;
+  resize: none;
+  border: none;
+  outline: 0;
+}
+.ContactBox .Button {
+  height: 15%;
+  border: none;
+  border-radius: .5rem;
+  border-radius: 1rem;
+  padding: .5rem 0;
+  background: linear-gradient(rgb(18, 27, 44), rgb(0, 0, 0));
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 5px 3px rgba(50, 50, 50, 0.77);
+}
+.ContactBox .Button:active {
+  position: relative;
+  top: 3px;
+  box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.77);
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+}
+.Contato {
+  display: flex;
+  justify-content: space-around;
+  height: 30vh;
+}
+.Contato .Item {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 3px rgba(50, 50, 50, 0.77);
+  border: solid 1px gray;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  width: 40%;
+  height: 70%;
+  display: flex;
+}
+.Contato .Item .Img {
+  width: 20%;
+  height: auto;
+  margin: auto;
+}
+.Contato .Item p {
+  font-size: 25px;
+  margin: auto;
+  margin-left: 0;
+}
+.Footer {
+  height: 30vh;
+  background-color: black;
+}
+.Footer .RedesSociais {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+}
+.Footer .Item {
+  cursor: pointer;
+  width: 4%;
+  margin: .5rem;
+}
+.Footer .RedesSociais .Item img {
+  width: 100%;
+  height: auto;
+}
+.Copy {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+.Copy p {
+  color: white;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+@media (max-width: 912px) {
+  .MuitoPrazerBody div img {
+    width: 100%;
+    height: auto;
+  }
+  .MenuBt {
+    font-size: 15px;
+    width: 25%;
+    margin: 1rem;
+    color: white;
+    font-weight: bold;
+  }
+  .MuitoPrazerBody .Text {
+    font-size: 2vw;
+    height: auto;
+  }
+  .PageTitle {
+    height: 10vh;
+  }
+  .MuitoPrazerBody {
+    height: 90vh;
+  }
+  .PortfolioItem {
+    height: 40vh;
+    width: 100%;
+    padding: .5rem 0;
+  }
+  .PortfolioItem .Title {
+    font-size: 20px;
+  }
+  .PortfolioItem .Description {
+    font-size: 15px;
+  }
+  .Contato {
+    flex-direction: column;
+  }
+  .Contato .Item {
+    width: 100%;
+    height: 30%;
+  }
+  .Contato .Item p {
+    font-size: 20px;
+    width: 70%;
+  }
+  .Contato .Item .Img {
+    height: 80%;
+    width: auto;
+  }
+  .ContactBox {
+    padding: 1rem;
+  }
+  .ContactBox .Title {
+    font-size: 18px;
+    height: 8%;
+  }
+  .Footer {
+    height: 15vh;
+  }
+  .RedesSociais {
+    height: 40%;
+  }
+  .RedesSociais .Item {
+    width: 8%;
+  }
+  .Copy {
+    height: 60%;
   }
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@media (max-width: 767px) {
+  .ImagemBg {
+    height: auto;
+  }
+  .ImagemBg img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .MenuBt {
+    font-size: 12px;
+  }
+  .Stack {
+    height: 40px;
+  }
+  .Stack img{
+    height: 25px;
+  }
+  .PageTitle {
+    height: 8vh;
+    padding-bottom: .5rem;
+  }
+  .MuitoPrazerBody {
+    height: 92vh;
+  }
+  .MuitoPrazerBody div {
+    width: 100%;
+    height: 50%;
+    padding: 1rem 0;
+    font-size: 10px;
+  }
+  .MuitoPrazerBody div img {
+    height: 100%;
+    width: auto;
+  }
+  .MuitoPrazerBody div button {
+    margin: 1rem 0;
+  }
+  .MuitoPrazerBody .Photo {
+    height: 30%;
+  }
+  .MuitoPrazerBody .Text {
+    font-size: 2.4vw;
+    height: 70%;
+  }
+  .PortfolioItem {
+    height: 40vh;
+    width: 100%;
+    padding: .5rem 0;
+  }
+  .PortfolioItem .Title {
+    font-size: 12px;
+  }
+  .PortfolioItem .Description {
+    font-size: 8px;
+  }
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@media (max-width: 414px) {
+  .Contato .Item .Text {
+    font-size: 16px;
+  }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (max-width: 280px) {
+  .MuitoPrazerBody .Text {
+    font-size: 9px;
+  }
+  .PortfolioItem .Description {
+    font-size: 7px;
+  }
+  .ContactBox .Title {
+    height: 8%;
+    font-size: 12px;
+  }
+  .Contato .Item p {
+    font-size: 12px;
   }
 }
