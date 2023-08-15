@@ -19,8 +19,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8"></meta>
         <title>Caléb Porto</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="description" content="Soluções em tecnologia você encontra aqui!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='keywords' content='caleb porto, caléb porto, caleb rangel porto, caléb rangel porto, calebporto.com,
+         www.calebporto.com, calebporto.com.br, www.calebporto.com.br, são francisco de itabapoana, desenvolvedor, programador, criação de erp' />
+        <meta property="og:title" content="Caléb Porto" />
+        <meta property="og:description" content="Soluções em tecnologia você encontra aqui!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/media/Caleb.png" />
+        <meta property="og:url" content="https://www.calebporto.com" />
       </Head>
       <Body bgColor='black'>
         <Container>
