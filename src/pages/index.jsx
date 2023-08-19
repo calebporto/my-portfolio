@@ -76,7 +76,7 @@ export default function Home() {
             em Power Point e planilhas Excel, cadastro de equipe e fornecedores, entre outros."
             >
                 <div style={{height: '100%', width: 'auto', position:'relative'}}>
-                  <iframe src="https://player.vimeo.com/video/822826473?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="ERP - M Souza Comunica&amp;ccedil;&amp;atilde;o"></iframe>
+                  <iframe src="https://player.vimeo.com/video/822826473?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="ERP - M Souza Comunicação"></iframe>
                 </div>
                 <Script src="https://player.vimeo.com/api/player.js"></Script>
             </PortfolioItem>
@@ -86,7 +86,7 @@ export default function Home() {
               com Painel Administrativo, Painel do Membro e Landing Pages."
             >
                 <div style={{height: '100%', width: 'auto', position:'relative'}}>
-                  <iframe src="https://player.vimeo.com/video/784053724?h=37a68589d5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Plataforma IBVG.mp4"></iframe>
+                  <iframe src="https://player.vimeo.com/video/854815531?h=37a68589d5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Plataforma IBVG.mp4"></iframe>
                 </div>
                 <Script src="https://player.vimeo.com/api/player.js"></Script>
             </PortfolioItem>
