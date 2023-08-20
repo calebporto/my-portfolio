@@ -9,6 +9,19 @@ export async function sendMail(subject, toEmail, otpText) {
       pass: process.env.NODEMAILER_PASSWORD,
     }
   });
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
+  });
+
   var clientResponseText = `
 Olá! Agradeço o contato!
 Em breve estarei analisando sua mensagem e respondendo.
@@ -23,7 +36,7 @@ Caléb Porto
     subject: subject,
     text: clientResponseText,
   };
-  
+
   var myMailOptions = {
     from: `Caléb Porto <${process.env.NODEMAILER_EMAIL}>`,
     to: process.env.NODEMAILER_EMAIL,
@@ -34,18 +47,30 @@ ${toEmail},
 ${otpText}
     `,
   };
-  transporter.sendMail(clientMailOptions, function (error, info) {
-    if (error) {
-        console.log(error)
-    } else {
+
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(clientMailOptions, function (error, info) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
         console.log('E-mail cliente enviado')
-    }
+        resolve(info);
+      }
+    });
   });
-  transporter.sendMail(myMailOptions, function (error, info) {
-    if (error) {
-        console.log(error)
-    } else {
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(myMailOptions, function (error, info) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
         console.log('E-mail para mim enviado')
-    }
+        resolve(info);
+      }
+    });
   });
+  return true
 }

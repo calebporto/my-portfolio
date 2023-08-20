@@ -23,25 +23,27 @@ export default props => {
         } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1 || email.length < 8) {
             throwAlert('E-mail incorreto.', 'danger')
         } else {
-            setSending(true)
-            const body = {
-                email: email,
-                text: text
-            }
-            fetch('/api/send-email', {
-                method: 'POST',
-                body: JSON.stringify(body)
-            }).then(response => {
-                if (!response.ok) {
-                    throwAlert('Algo deu errado. Tente novamente mais tarde.', 'danger')
-                    cleanForm()
-                    setSending(false)
-                } else {
-                    throwAlert('Seu contato foi enviado, e logo entrarei em contato com você.', 'success')
-                    cleanForm()
-                    setSending(false)
+            if (!sending) {
+                setSending(true)
+                const body = {
+                    email: email,
+                    text: text
                 }
-            })
+                fetch('/api/send-email', {
+                    method: 'POST',
+                    body: JSON.stringify(body)
+                }).then(response => {
+                    if (!response.ok) {
+                        throwAlert('Algo deu errado. Tente novamente mais tarde.', 'danger')
+                        cleanForm()
+                        setSending(false)
+                    } else {
+                        throwAlert('Seu contato foi enviado, e logo entrarei em contato com você.', 'success')
+                        cleanForm()
+                        setSending(false)
+                    }
+                })
+            }
 
         }
     }
