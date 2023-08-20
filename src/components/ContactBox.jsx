@@ -28,7 +28,7 @@ export default props => {
                 email: email,
                 text: text
             }
-            fetch('/api/send-email-mail', {
+            fetch('/api/send-email', {
                 method: 'POST',
                 body: JSON.stringify(body)
             }).then(response => {
