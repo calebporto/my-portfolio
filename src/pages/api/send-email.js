@@ -4,6 +4,7 @@ import { sendMail } from "@/helpers/mailServices"
 
 export default async function handler(req, res) {
   try {
+    console.log('Teste')
     const {email, text} = JSON.parse(req.body)
     const sendEmail = await sendMail(
       'Resposta ao contato em www.calebporto.com',
