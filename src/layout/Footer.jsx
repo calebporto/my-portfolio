@@ -5,7 +5,7 @@ export default props => {
         <div className="Footer">
             <div className="RedesSociais">
                 <div className="Item">
-                    <Image id="linkedin" src="/media/linkedin.png"
+                    <Image alt="" id="linkedin" src="/media/linkedin.png"
                     onClick={() => window.open('https://www.linkedin.com/in/calebportodev/')}
                     width= {100} height={100}
                     />

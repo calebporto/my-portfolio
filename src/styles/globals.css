@@ -149,23 +149,25 @@
   box-shadow: 0px 2px 3px rgba(50, 50, 50, 0.77);
 }
 .PortfolioItem {
-  width: 50%;
-  height: 80vh;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 120vh;
   padding: 2rem 1rem;
 }
 .PortfolioItem .Title {
-  font-size: 20px;
+  font-size: 25px;
   height: 7%;
   font-weight: bold;
   color: white;
   margin-bottom: 1rem;
 }
 .PortfolioItem .Video {
-  height: 65%;
+  width: 100%;
+  height: 80%;
 }
 .PortfolioItem .Description {
   margin: 1rem 0;
-  font-size: 12px;
+  font-size: 18px;
   text-align: justify;
   width: 100%;
   color: white;
@@ -173,7 +175,7 @@
 }
 .ContactBox {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   padding: 2rem;
   box-shadow: 5px 5px 3px rgba(50, 50, 50, 0.77);
   border: solid 1px gray;
@@ -187,11 +189,18 @@
   height: 12%;
   font-size: 20px;
   font-weight: bold;
+  margin-top: .5rem;
+}
+.EmailInput {
+  padding: 3px;
+  width: 100%;
+  border: none;
+  outline: 0;
 }
 .ContactBox .Message {
   height: 73%;
   width: 100%;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   resize: none;
   border: none;
   outline: 0;

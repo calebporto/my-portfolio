@@ -20,7 +20,7 @@ export default props => {
                 <button>Escrever mensagem</button>
             </div>
             <div className="Photo">
-                <Image src="/media/Familia.png" width={1000} height={1000} />
+                <Image alt="" src="/media/Familia.png" width={1000} height={1000} />
             </div>
         </div>
     )
