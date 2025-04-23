@@ -1,11 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import { sendMail } from "@/helpers/mailServices"
+import { sendEmailFromGmail } from "@/helpers/mailServices"
 
 export default async function handler(req, res) {
   try {
     const {email, text} = JSON.parse(req.body)
-    const sendEmail = await sendMail(
+    const sendEmail = await sendEmailFromGmail(
       'Resposta ao contato no site',
       email,
       text
