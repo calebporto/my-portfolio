@@ -74,3 +74,63 @@ ${otpText}
   });
   return true
 }
+
+export async function sendEmailFromGmail(subject, toEmail, otpText) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_EMAIL,
+      pass: process.env.GMAIL_KEY // ex: 'abcdefghijklmnop'
+    }
+  });
+  const clientResponseText = `
+  Olá! Agradeço o contato!
+  Em breve estarei analisando sua mensagem e respondendo.
+  
+  Atenciosamente,
+  
+  Caléb Porto
+    `
+  const clientMailOptions = {
+    from: `Caléb Porto <${process.env.GMAIL_EMAIL}>`,
+    to: toEmail,
+    subject: subject,
+    text: clientResponseText,
+  };
+  const myMailOptions = {
+    from: `Caléb Porto <${process.env.GMAIL_EMAIL}>`,
+    to: toEmail,
+    subject: subject,
+    text: `
+${toEmail},
+
+${otpText}
+    `,
+  };
+
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(clientMailOptions, function (error, info) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
+        console.log('E-mail cliente enviado')
+        resolve(info);
+      }
+    });
+  });
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(myMailOptions, function (error, info) {
+      if (error) {
+        console.error(error);
+        reject(error);
+      } else {
+        console.log('E-mail para mim enviado')
+        resolve(info);
+      }
+    });
+  });
+  return true
+}

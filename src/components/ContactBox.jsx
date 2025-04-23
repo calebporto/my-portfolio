@@ -2,7 +2,7 @@ import { useState } from "react"
 import Alert from "./Alert"
 import { _throwAlert } from "./Alert"
 
-export default props => {
+export default function ContactBox(props) {
     const [email, setEmail] = useState('')
     const [text, setText] = useState('')
     const [alertShow, setAlertShow] = useState(false)
