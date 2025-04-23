@@ -7,7 +7,7 @@ export default props => {
             </div>
             <div className="Item">
                 <img src="/media/e-mail.png" alt="" className="Img" />
-                <p className="Text">contato@calebporto.com</p>
+                <p className="Text">calebbds@gmail.com</p>
             </div>
         </div>
     )
