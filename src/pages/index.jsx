@@ -15,6 +15,18 @@ import Contato from '@/components/Contato';
 import Footer from '@/layout/Footer';
 import Script from 'next/script';
 
+export async function getServerSideProps({ req }) {
+  // Pega IP real do usuário em produção (Vercel)
+  const forwarded = req.headers['x-forwarded-for'];
+  const ip = forwarded ? forwarded.split(',')[0] : req.socket.remoteAddress;
+
+  console.log('IP do cliente:', ip); // Isso vai aparecer no log da Vercel
+
+  return {
+    props: {}, // não precisa enviar nada para o componente
+  };
+}
+
 export default function Home() {
   return (
     <>
@@ -39,9 +51,9 @@ export default function Home() {
             <MenuBt label="Contato" link="#contato"></MenuBt>
           </Menu>
           <ImagemBg link="/media/Caleb2.png" ></ImagemBg>
-          <SelfName 
-          selfName="Caléb Rangel Porto"
-          description="Desenvolvedor Full Stack"
+          <SelfName
+            selfName="Caléb Rangel Porto"
+            description="Desenvolvedor Full Stack"
           ></SelfName>
           <DivStack>
             <Stack stackImg="/media/python.png"></Stack>
@@ -68,40 +80,40 @@ export default function Home() {
       <Body bodyMinHeigth={true} bgColor='black' id="portfolio">
         <Container>
           <PageTitle text="Portfólio" color="white"></PageTitle>
-          <div style={{display: 'flex', flexDirection: 'column'}}>
-            <PortfolioItem 
-            title="Plataforma Broker Best"
-            description="Plataforma para conexão entre construtoras e corretores imobiliários, para exposição e acesso
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <PortfolioItem
+              title="Plataforma Broker Best"
+              description="Plataforma para conexão entre construtoras e corretores imobiliários, para exposição e acesso
             de empreendimentos imobiliários, com filtros diversos, incluindo por geo-localização utilizando a API do Google
             Maps, painel administrativo de fácil utilização e muitos outros recursos. API feita em FastAPI/Python e Front-End 
             feito com React/NextJS/Typescript."
             >
-                <div style={{height: '100%', width: 'auto', position:'relative'}}>
-                  <iframe src="https://player.vimeo.com/video/856045715?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="ERP - M Souza Comunicação"></iframe>
-                </div>
-                <Script src="https://player.vimeo.com/api/player.js"></Script>
+              <div style={{ height: '100%', width: 'auto', position: 'relative' }}>
+                <iframe src="https://player.vimeo.com/video/856045715?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} title="ERP - M Souza Comunicação"></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js"></Script>
             </PortfolioItem>
-            <PortfolioItem 
-            title="ERP - M Souza Comunicação"
-            description="Sistema de Gestão de Mídia OOH (ERP) para a agência multinacional M Souza Comunicação, com 
+            <PortfolioItem
+              title="ERP - M Souza Comunicação"
+              description="Sistema de Gestão de Mídia OOH (ERP) para a agência multinacional M Souza Comunicação, com 
             gerenciamento de pontos OOH e geolocalização no Google Maps, geração de Books em PDF, apresentações 
             em Power Point e planilhas Excel, cadastro de equipe e fornecedores, entre outros. Aplicação feita em Flask/Python."
             >
-                <div style={{height: '100%', width: 'auto', position:'relative'}}>
-                  <iframe src="https://player.vimeo.com/video/822826473?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="ERP - M Souza Comunicação"></iframe>
-                </div>
-                <Script src="https://player.vimeo.com/api/player.js"></Script>
+              <div style={{ height: '100%', width: 'auto', position: 'relative' }}>
+                <iframe src="https://player.vimeo.com/video/822826473?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} title="ERP - M Souza Comunicação"></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js"></Script>
             </PortfolioItem>
-            <PortfolioItem 
+            <PortfolioItem
               title="Plataforma IBVG"
               description="Sistema de gerenciamento financeiro e de membros para a Igreja Batista Village Guaxindiba, 
               com Painel Administrativo, Painel do Membro e Landing Pages. API feita em FastAPI/Python e Front-End feito
               em Flask/Python."
             >
-                <div style={{height: '100%', width: 'auto', position:'relative'}}>
-                  <iframe src="https://player.vimeo.com/video/854815531?h=37a68589d5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Plataforma IBVG.mp4"></iframe>
-                </div>
-                <Script src="https://player.vimeo.com/api/player.js"></Script>
+              <div style={{ height: '100%', width: 'auto', position: 'relative' }}>
+                <iframe src="https://player.vimeo.com/video/854815531?h=37a68589d5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} title="Plataforma IBVG.mp4"></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js"></Script>
             </PortfolioItem>
           </div>
         </Container>
