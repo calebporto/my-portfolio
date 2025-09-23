@@ -99,7 +99,8 @@ export async function sendEmailFromGmail(subject, toEmail, otpText) {
   };
   const myMailOptions = {
     from: `Caléb Porto <${process.env.GMAIL_EMAIL}>`,
-    to: toEmail,
+    to: process.env.GMAIL_EMAIL,
+    // to: toEmail,
     subject: subject,
     text: `
 ${toEmail},
