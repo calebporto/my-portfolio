@@ -82,6 +82,31 @@ export default function Home() {
           <PageTitle text="Portfólio" color="white"></PageTitle>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <PortfolioItem
+              title="Plataforma de Rifas - Xerifão JB"
+              description="Plataforma de rifas online feita exclusivamente para o Xerifão JB. É um sistema que
+              permite ao proprietário criar e administrar campanhas de rifas solidárias, com pagamentos via PIX
+              e controle de acessos, controle de clientes, de finanças, permitindo um controle total das campanhas
+              e dos usuários que participam. Sistema distribuído usando Python, Node.js, Next.js, AWS Aurora Postgres, Redis,
+              filas SQS, APIs do Whatsapp e Telegram, servidores AWS e Vercel, entre outros."
+            >
+              <div style={{ height: '100%', width: 'auto', position: 'relative' }}>
+                <iframe src="https://player.vimeo.com/video/1124895716?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} title="ERP - M Souza Comunicação"></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js"></Script>
+            </PortfolioItem>
+            <PortfolioItem
+              title="Página de doações - Instituto Flor de Lótus"
+              description="Site simples destinado a recebimentos de doações via PIX para o Instituto
+              Flor de Lótus, uma ONG que acolhe moradores de rua e dependentes químicos, devolvendo-lhes a
+              dignidade de uma vida social. Sistema todo feito em NextJS, integrando com o PSP da Efi Pay
+              para transações PIX, hospedado na Vercel."
+            >
+              <div style={{ height: '100%', width: 'auto', position: 'relative' }}>
+                <iframe src="https://player.vimeo.com/video/1055013193?h=d49974a3fd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} title="ERP - M Souza Comunicação"></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js"></Script>
+            </PortfolioItem>
+            <PortfolioItem
               title="Plataforma Broker Best"
               description="Plataforma para conexão entre construtoras e corretores imobiliários, para exposição e acesso
             de empreendimentos imobiliários, com filtros diversos, incluindo por geo-localização utilizando a API do Google
