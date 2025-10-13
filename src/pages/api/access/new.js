@@ -30,6 +30,7 @@ export default async function handler(req, res) {
       const create = await repository.create(clientIp, host);
       if (!create) {
         console.log('Erro ao registrar IP')
+        
       } else {
         console.log('IP registrado com sucesso', clientIp)
       }
