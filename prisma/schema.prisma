@@ -17,6 +17,7 @@ datasource db {
 model Access {
   id        Int      @id @default(autoincrement())
   ip        String
+  host      String   @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

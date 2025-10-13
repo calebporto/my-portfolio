@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       }
 
       const repository = new AccessRepository();
-      const create = await repository.create(clientIp);
+      const create = await repository.create(clientIp, host);
       if (!create) {
         console.log('Erro ao registrar IP')
       } else {

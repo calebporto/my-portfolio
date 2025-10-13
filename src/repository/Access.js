@@ -5,12 +5,13 @@ export default class AccessRepository {
         this.orm = prisma
     }
 
-    async create(ip) {
+    async create(ip, host) {
         try {
             
             return await this.orm.access.create({
                 data: {
-                    ip: ip
+                    ip: ip,
+                    host: host
                 }
             })
         } catch (error) {
