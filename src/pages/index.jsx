@@ -14,6 +14,7 @@ import ContactBox from '@/components/ContactBox';
 import Contato from '@/components/Contato';
 import Footer from '@/layout/Footer';
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 export async function getServerSideProps({ req }) {
   // Pega IP real do usuário em produção (Vercel)
@@ -28,6 +29,11 @@ export async function getServerSideProps({ req }) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    fetch('/api/access/new')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }, [])
   return (
     <>
       <Head>
