@@ -20,15 +20,18 @@ export async function getServerSideProps({ req }) {
   // Pega IP real do usuário em produção (Vercel)
   const forwarded = req.headers['x-forwarded-for'];
   const ip = forwarded ? forwarded.split(',')[0] : req.socket.remoteAddress;
+  const host = req.headers.host;
 
   console.log('IP do cliente:', ip); // Isso vai aparecer no log da Vercel
 
   return {
-    props: {}, // não precisa enviar nada para o componente
+    props: {
+      host
+    }
   };
 }
 
-export default function Home() {
+export default function Home({ host }) {
   useEffect(() => {
     fetch('/api/access/new')
       .then(res => res.json())
@@ -37,7 +40,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Caléb Porto</title>
+        <title>
+          {
+            typeof host === 'string' && host.includes('calebporto') ? 'Caléb Porto' : 'Porto Solutions'
+          }
+        </title>
         <meta charSet="UTF-8"></meta>
         <meta name="description" content="Soluções em tecnologia você encontra aqui!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
