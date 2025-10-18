@@ -63,7 +63,7 @@ export default function Home({ host }) {
             <MenuBt label="Portfolio" link="#portfolio"></MenuBt>
             <MenuBt label="Contato" link="#contato"></MenuBt>
           </Menu>
-          <ImagemBg link="/media/Caleb2.png" ></ImagemBg>
+          <ImagemBg link="/media/Caleb3.png" ></ImagemBg>
           <SelfName
             selfName="Caléb Rangel Porto"
             description="Desenvolvedor Full Stack"
